@@ -1,0 +1,96 @@
+html, body {
+  background: #000;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.page-wrapper {
+  background: #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding-top: 80px;
+  z-index: 1;
+}
+
+.videoplayer {
+  background: url("../images/taktiklord.jpg") no-repeat center center;
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding-right: 285px;
+  padding-top: 60px;
+  top: 0;
+  left: 0;
+}
+
+.chat {
+  position: absolute;
+  height: 100%;
+  width: 285px;
+  right: 0;
+  top: 0;
+  background: #0c0c0c;
+  padding: 75px 15px 15px 15px;
+  overflow: auto;
+}
+
+.chat .chatmessage {
+  margin-bottom: 12px;
+}
+
+.chat .message-body {
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.chat .message-head {
+  font-size: 12px;
+}
+
+.chat .message-head a {
+  color: #131313;
+}
+
+.ui-switcher {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 60px;
+  top: 0;
+  left: 0;
+  background: #0c0c0c;
+}
+
+.connect-button {
+  margin-top: 12px;
+}
+
+.ui-switcher input {
+  margin-top: 6px;
+}
+
+.topics {
+  margin-top: 5px;
+}
+
+.tabs {
+  background: transparent;
+}
+
+.tabs .tab a {
+  color: #fff;
+}
+
+.tabs .tab a:hover {
+  color: #666; 
+}
+
+.tabs .indicator {
+  background: #fff;
+}

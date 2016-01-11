@@ -1,0 +1,110 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>#NoViews4Drachen</title>
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css" type="text/css">
+  <link rel="stylesheet" href="css/styles.css" type="text/css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+</head>
+
+<body>
+  <div class="page-wrapper">
+    <div class="videoplayer">
+      <div id="stream">
+        <div id="streamView"></div>
+        <div id="streamBar"></div>
+      </div>
+    </div>
+    <div class="chat">
+      <div id="chat">
+        <h3>Chat von <span class="streamer-name"></span></h3>
+        <div class="messages">
+
+        </div>
+      </div>
+      <div class="list" id="stats">
+        <h3>Stats</h3>
+        <ul>
+          <li><strong><span class="streamer-name"></span> (<span class="streamer-level"></span>)</strong></li>
+          <li><span class="streamer-fans"></span> Fans</li>
+          <li><span class="streamer-likes"></span> Likes</li>
+          <li><span class="streamer-gifts"></span> Geschenkvalue</li>
+        </ul>
+      </div>
+      
+      <div class="list" id="tweets">
+        <h3>#NV4D</h3>
+        <p>
+          <a class="twitter-timeline"  href="https://twitter.com/hashtag/nv4d" data-widget-id="686648036295053314">#nv4d-Tweets</a>
+          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        </p>
+      </div>
+      
+      <div class="list" id="links">
+        <h3>Links</h3>
+        <ul>
+          <li><a href="http://lachschon.de/">Lachschon</a></li>
+        </ul>
+      </div>
+      
+      <div class="list" id="mirror">
+        <h3>Mirror Seiten</h3>
+        <ul>
+          <li><a href="http://kaschperle.tk/NoViews4Drache/">Kaschperle.tk - Mirror</a></li>
+          <li><a href="http://kaschperle.chickenkiller.com/NoViews4Drache/">Chickenkiller - Mirror</a></li>
+          <li><a href="http://kaschperle.strangled.net/NoViews4Drache/">Strangled - Mirror</a></li>
+          <li><a href="http://kaschperle.crabdance.com/NoViews4Drache/">Crabdance - Mirror</a></li>
+          <li><a href="http://kaschperle.ignorelist.com/NoViews4Drache/">Ignorelist - Mirror</a></li>
+        </ul>
+      </div>
+      
+      <div class="list" id="github">
+        <h3>Mithelfen</h3>
+        <a href="#">Link zum Repo folgt</a>
+        <hr>
+        <h4>Changelog</h4>
+        <ul>
+          <li><strong>11.01.2015 - Version 0.1.0</strong><br> neues Design, neugeschriebenes Skript, mehrere Mirror hinzugefügt, Tabnavigation hinzugefügt</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="ui-switcher">
+    <div class="row">
+      <div class="col s4">
+        <form class="streamer-selection">
+          <div class="row">
+            <div class="col s8">
+              <input type="text" name="streamer" id="streamer" value="">  
+            </div>
+            <div class="col s4">
+              <button class="connect-button btn blue waves-effect waves-light">Verbinden</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="col s6">
+        <ul class="tabs topics darken-4">
+          <li class="tab col s2"><a href="#chat">Chat</a></li>
+          <li class="tab col s2"><a href="#stats">Stats</a></li>
+          <li class="tab col s2"><a href="#tweets">Twitter</a></li>
+          <li class="tab col s2"><a href="#links">Links</a></li>
+          <li class="tab col s2"><a href="#mirror">Mirror</a></li>
+          <li class="tab col s2"><a href="#github">Github</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://js.pusher.com/2.2/pusher.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+  <script type="text/javascript" src="https://releases.flowplayer.org/js/flowplayer-3.2.13.min.js"></script>
+  <script type="text/javascript" src="js/YouNowPlayer.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+  <script type="text/javascript" src="js/ui.js"></script>
+</body>
+
+</html>
