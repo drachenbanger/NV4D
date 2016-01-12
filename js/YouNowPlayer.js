@@ -89,7 +89,7 @@ YouNowPlayer.prototype.addChatMessage = function (message) {
         wasBottom = true;
     if ($('.messages').children().length > this.config.maxMessages - 1)
         $('.messages').children()[0].remove();
-    $('.messages').append('<div class="chatmessage"><div class="message-head"><div class="chip"><img class="circle" src="https://cdn2.younow.com/php/api/channel/getImage/?channelId=' + message.userId + '" height="20" /><a href="https://www.younow.com/' + message.profileUrlString + '"><strong>' + message.name + '</strong> (' + message.userLevel + ')</a></div></div><div class="message-body">' + message.comment + '</</div>');
+    $('.messages').append('<div class="chatmessage"><div class="message-head"><a target="_blank" href="https://www.younow.com/' + message.profileUrlString + '"><div class="chip"><img class="circle" src="https://cdn2.younow.com/php/api/channel/getImage/?channelId=' + message.userId + '" height="20" /><strong>' + message.name + '</strong> (' + message.userLevel + ')</div></a></div><div class="message-body">' + message.comment + '</</div>');
     if (wasBottom) {
         $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 200)
     }

@@ -29,7 +29,7 @@ html, body {
   left: 0;
 }
 
-.chat {
+.sidebar {
   position: absolute;
   height: 100%;
   width: 285px;
@@ -40,21 +40,49 @@ html, body {
   overflow: auto;
 }
 
-.chat .chatmessage {
+.sidebar .chatmessage {
   margin-bottom: 12px;
 }
 
-.chat .message-body {
+.sidebar .message-body {
   font-size: 12px;
   margin-top: 5px;
 }
 
-.chat .message-head {
+.sidebar .message-head {
   font-size: 12px;
 }
 
-.chat .message-head a {
-  color: #131313;
+.sidebar .message-head a {
+  color: #fff;
+}
+
+.sidebar .chip {
+  color: #fff;
+  background: #2e2e2e;
+  width: 100%;
+}
+
+.timeline {
+  margin-top: 30px;
+  font-size: 12px;
+  font-family: monospace;
+}
+
+.timeline li {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #2c2c2c;
+}
+
+.timeline h5 {
+  font-size: 14px;
+}
+
+.list li {
+  margin-bottom: 6px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #2c2c2c;
 }
 
 .ui-switcher {
@@ -69,7 +97,7 @@ html, body {
 
 .connect-button {
   margin-top: 12px;
-}
+}m
 
 .ui-switcher input {
   margin-top: 6px;
