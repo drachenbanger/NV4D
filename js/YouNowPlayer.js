@@ -85,15 +85,18 @@ YouNowPlayer.prototype.connected = function (streamerData) {
 };
 YouNowPlayer.prototype.addChatMessage = function (message) {
     var wasBottom = false;
-    if ($('.messages').scrollTop() > $('.messages')[0].scrollHeight - $('.messages').height() - 25)
+    var scrolledTop = $('.messages').scrollTop();
+    var scrollCheck = $('.messages')[0].scrollHeight - $('.messages').outerHeight() - 100;
+    if (scrolledTop > scrollCheck)
         wasBottom = true;
     if ($('.messages').children().length > this.config.maxMessages - 1)
         $('.messages').children()[0].remove();
     $('.messages').append('<div class="chatmessage"><div class="message-head"><a target="_blank" href="https://www.younow.com/' + message.profileUrlString + '"><div class="chip"><strong>' + message.name + '</strong> (' + message.userLevel + ')</div></a></div><div class="message-body">' + message.comment + '</</div>');
     if (wasBottom) {
-        $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 200)
+        console.log('was bottom');
+        console.log(scrolledTop, $('.messages')[0].scrollHeight);
+        $('.messages').scrollTop($('.messages')[0].scrollHeight);
     }
-    console.log(wasBottom);
 };
 YouNowPlayer.prototype.updateInfo = function () {
     var socialMedia = "";
