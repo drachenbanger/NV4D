@@ -96,63 +96,6 @@ Player.prototype.appendData = function() {
   this.$streamerFans.text(this.userData.fans);
 };
 
-var Data = function() {
-  this.mirrors = false;
-  this.links = false;
-
-  this.fetchData();
-  this.appData();
-};
-
-Data.prototype.appData = function() {
-  $links = $('#links').find('ul');
-  $mirrors = $('#mirror').find('ul');
-  $links.html('');
-  $mirrors.html('');
-  if(this.links) {
-    for(i = 0; i < this.links.length; i++) {
-      item = this.links[i];
-      if(item) {
-        $links.append('<li class="link-item-' + i +'"><a href="' + item.url +'" target="_blank" title="' + item.name + '">' + item.name + '</li>');
-      }
-    }
-  }
-
-  if(this.mirrors) {
-    for(i = 0; i < this.mirrors.length; i++) {
-      item = this.mirrors[i];
-      if(item) {
-        console.log(item);
-        $mirrors.append('<li class="mirror-item-' + i +'"><a href="' + item.url +'" title="' + item.name + '">' + item.name + '</li>');
-      }
-    }
-  }
-};
-
-Data.prototype.fetchData = function() {
-  var that = this;
-  $.ajax({
-    url: 'http://kaschperle.tk/nv4d_api/api/mirrors.php',
-    jsonp: "callback",
-    dataType: "jsonp",
-    success: function(json, b, c) {
-      that.mirrors = json;
-      that.appData();
-    }
-  });
-
-  $.ajax({
-    url: 'http://kaschperle.tk/nv4d_api/api/links.php',
-    jsonp: "callback",
-    dataType: "jsonp",
-    success: function(json, b, c) {
-      that.links = json;
-      that.appData();
-    }
-  });
-};
-
 $(document).ready(function () {
   new Player();
-  data = new Data();
 });
