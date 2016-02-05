@@ -54,7 +54,7 @@ Player.prototype.getStreamerData = function() {
   this.currentPlayer.disconnect();
   console.log('Connecting to ' + this.streamerID);
   $.ajax({
-    url: 'http://www.kaschperle.tk/NoViews4Drache/request/?username=' + this.streamerID,
+    url: window.location.origin + '/NoViews4Drache/request/?username=' + this.streamerID,
     dataType: "json",
     success: function(json, b, c) {
       if(json['errorCode'] > 0) {
